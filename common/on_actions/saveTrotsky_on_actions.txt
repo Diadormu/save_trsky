@@ -1,0 +1,42 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = trotsky_has_saved
+					FROM = {
+						original_tag = SOV
+						has_government = communism
+						has_country_leader = { character = SOV_iosif_stalin }
+					}
+					ROOT = {
+						has_government = communism
+						has_country_flag = trotsky_saved
+					}
+				}
+				clr_global_flag = trotsky_has_saved
+				ROOT = {
+					clr_country_flag = trotsky_saved
+					if = {
+						limit = { has_country_flag = trotsky_to_government }
+						clr_country_flag = trotsky_to_government
+					}
+					if = {
+						limit = { has_country_flag = trotsky_to_army }
+						clr_country_flag = trotsky_to_army
+					}
+					if = {
+						limit = {
+							OR = {
+								has_country_leader = { character = gov_lev_trotsky }
+								has_country_leader = { character = army_leon_trotsky }
+							}
+						}
+						retire_ideology_leader = communism
+					}
+				}
+				SOV_kill_trotsky_effect = yes
+			}
+		}
+	}
+}

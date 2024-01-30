@@ -1,0 +1,209 @@
+persuade_trotsky_operation = {
+	icon = GFX_raid_trotskys_villa
+	map_icon = GFX_raid_trotskys_villa_map
+	name = persuade_trotsky_operation
+	desc = persuade_trotsky_operation_desc
+	days = 35
+
+	priority = 11
+
+	#allowed = {}
+	#available = {}
+	visible = {
+		NOT = {
+			has_global_flag = trotsky_in_norwegian_government
+			has_global_flag = AAT_trotsky_sent_to_stalin
+			has_global_flag = flag_mexico_invited_trotsky_to_government
+			has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
+			has_global_flag = flag_trotsky_dead
+			has_global_flag = trotsky_has_saved
+			SOV = { has_completed_focus = SOV_behead_the_snake }
+		}
+		has_government = communism
+		NOT = { has_country_leader = { character = SOV_iosif_stalin } }
+		OR = {
+			AND = {
+				FROM = {
+					controls_state = 110 #OSTLANDET (Oslo) -> Trotsky not accepted in Mexico (or Soviets being super fast to kill him, which should be impossible btw)
+				}
+				has_global_flag = NOR_trotsky_in_norway
+			}
+			AND = {
+				FROM = {
+					controls_state = 277 #MEXICO CITY
+				}
+				has_global_flag = trotsky_exile_mexico
+			}
+		}
+	}
+
+	operatives = 1
+
+	network_strength = 50
+
+	equipment = {
+		infantry_equipment = 50
+		support_equipment = 50
+	}
+
+	#on_start = {  # SCOPE_OPERATION
+	#	
+	#}
+
+	outcome_modifiers = { operation_outcome operation_infiltrate_outcome }
+	cost_modifiers = { operation_cost operation_infiltrate_cost }
+	risk_modifiers = { operation_risk operation_infiltrate_risk }
+
+	outcome_potential = {
+		custom_effect_tooltip = persuade_trotsky_operation_outcome_tt
+	}
+	risk_chance = 0.2
+	experience = 5
+	# outcome is an effect that runs when the operation has completed
+	outcome_execute = { # SCOPE_OPERATION
+		ROOT = { country_event = { id = sts.3000 } } #SUCCESS
+	}
+
+	outcome_extra_chance = 0.40
+
+	outcome_extra_execute = {
+		ROOT = { country_event = { id = sts.3001 } } #FAILURE
+	}
+
+	# This is where all the separate phases are defined
+	# Each phase for an operation may have a single actual phase assigned to it, which is determined here
+	phases = { #infiltration 
+		infiltration_border = { base = 60 }
+		infiltration_submarine = { base = 20 }
+		infiltration_diplomatic = {
+			base = 20
+			modifier = {
+				FROM = {
+					has_war_with = ROOT
+				}
+				factor = 0
+			}
+		}
+	}
+	phases = {
+		persuade_trotsky_operation_attack = { base = 100 }
+	}
+	phases = {
+		exfiltration_border = { base = 40 }
+		exfiltration_go_to_ground = { base = 30 }
+		exfiltration_submarine_pickup = { base = 20 }
+		exfiltration_air_pickup = { 
+			base = 10
+			modifier = {
+				ROOT = {
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0 #less likely if we have no transports
+			}
+		}
+	}
+}
+
+save_trotsky_operation = {
+	icon = GFX_raid_trotskys_villa
+	map_icon = GFX_raid_trotskys_villa_map
+	name = save_trotsky_operation
+	desc = save_trotsky_operation_desc
+	days = 70
+
+	priority = 10
+
+	#allowed = {}
+	#available = {}
+	visible = {
+		NOT = {
+			has_global_flag = trotsky_in_norwegian_government
+			has_global_flag = AAT_trotsky_sent_to_stalin
+			has_global_flag = flag_mexico_invited_trotsky_to_government
+			has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
+			has_global_flag = flag_trotsky_dead
+			has_global_flag = trotsky_has_saved
+		}
+		SOV = { has_completed_focus = SOV_behead_the_snake }
+		has_government = communism
+		NOT = { has_country_leader = { character = SOV_iosif_stalin } }
+		OR = {
+			AND = {
+				FROM = {
+					controls_state = 110 #OSTLANDET (Oslo) -> Trotsky not accepted in Mexico (or Soviets being super fast to kill him, which should be impossible btw)
+				}
+				has_global_flag = NOR_trotsky_in_norway
+			}
+			AND = {
+				FROM = {
+					controls_state = 277 #MEXICO CITY
+				}
+				has_global_flag = trotsky_exile_mexico
+			}
+		}
+	}
+
+	operatives = 2
+
+	network_strength = 60
+
+	equipment = {
+		infantry_equipment = 60
+		support_equipment = 60
+	}
+
+	#on_start = {  # SCOPE_OPERATION
+	#	
+	#}
+
+	outcome_modifiers = { operation_outcome operation_infiltrate_outcome }
+	cost_modifiers = { operation_cost operation_infiltrate_cost }
+	risk_modifiers = { operation_risk operation_infiltrate_risk }
+
+	outcome_potential = {
+		custom_effect_tooltip = save_trotsky_operation_outcome_tt
+	}
+	risk_chance = 0.25
+	experience = 5
+	# outcome is an effect that runs when the operation has completed
+	outcome_extra_execute = {
+		ROOT = { country_event = { id = sts.3000 } } #SUCCESS
+	}
+
+	# This is where all the separate phases are defined
+	# Each phase for an operation may have a single actual phase assigned to it, which is determined here
+	phases = { #infiltration 
+		infiltration_border = { base = 60 }
+		infiltration_submarine = { base = 20 }
+		infiltration_diplomatic = {
+			base = 20
+			modifier = {
+				FROM = {
+					has_war_with = ROOT
+				}
+				factor = 0
+			}
+		}
+	}
+	phases = {
+		save_trotsky_operation_attack = { base = 100 }
+	}
+	phases = {
+		exfiltration_border = { base = 40 }
+		exfiltration_go_to_ground = { base = 30 }
+		exfiltration_submarine_pickup = { base = 20 }
+		exfiltration_air_pickup = { 
+			base = 10
+			modifier = {
+				ROOT = {
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0 #less likely if we have no transports
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+saveTrotsky_decision_categories = {
+	priority = 600
+	icon = GFX_decision_category_SOV_civil_war
+
+	visible = {
+		has_country_flag = trotsky_saved
+	}
+}

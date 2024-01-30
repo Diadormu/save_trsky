@@ -1,0 +1,72 @@
+country_event = {
+	id = sts.3000
+	title = sts.3000.t
+	desc = sts.3000.d
+	picture = GFX_news_event_023
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { has_global_flag = NOR_trotsky_in_norway }
+			clr_global_flag = NOR_trotsky_in_norway
+		}
+		NOR = {
+			if = {
+				limit = { has_country_flag = NOR_trotsky_sent_to_the_farm }
+				clr_country_flag = NOR_trotsky_sent_to_the_farm
+			}
+		}
+		if = {
+			limit = { has_global_flag = trotsky_exile_mexico }
+			clr_global_flag = trotsky_exile_mexico
+		}
+		if = {
+			limit = { has_global_flag = AAT_trotsky_in_mexico }
+			clr_global_flag = AAT_trotsky_in_mexico
+		}
+		set_global_flag = trotsky_has_saved
+		set_country_flag = trotsky_saved
+	}
+
+	option = {
+		name = sts.3000.a
+		set_country_flag = trotsky_to_government
+		show_ideas_tooltip = gov_lev_trotsky
+		SOV = {
+			if = {
+				limit = { has_country_leader = { character = SOV_iosif_stalin } }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = save_trotsky_opinion
+				}
+			}
+		}
+	}
+	option = {
+		name = sts.3000.b
+		set_country_flag = trotsky_to_army
+		show_ideas_tooltip = army_leon_trotsky
+		SOV = {
+			if = {
+				limit = { has_country_leader = { character = SOV_iosif_stalin } }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = save_trotsky_opinion
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = sts.3001
+	title = sts.3001.t
+	desc = sts.3001.d
+	picture = GFX_news_event_023
+	is_triggered_only = yes
+
+	#immediate = {
+	#	set_global_flag = trotsky_survives
+	#}
+	option = {
+		name = sts.3001.a
+	}
+}

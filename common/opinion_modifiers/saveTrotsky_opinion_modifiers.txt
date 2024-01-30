@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	save_trotsky_opinion = {
+		value = -60
+	}
+}

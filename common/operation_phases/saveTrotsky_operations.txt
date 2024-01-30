@@ -1,0 +1,14 @@
+persuade_trotsky_operation_attack = {
+	name = persuade_trotsky_operation_attack
+	desc = persuade_trotsky_operation_attack_desc
+	outcome = persuade_trotsky_operation_attack_outcome
+	icon = "GFX_phase_raid_trotskys_villa_small"
+	picture = "GFX_phase_raid_trotskys_villa"
+}
+save_trotsky_operation_attack = {
+	name = save_trotsky_operation_attack
+	desc = save_trotsky_operation_attack_desc
+	outcome = save_trotsky_operation_attack_outcome
+	icon = "GFX_phase_raid_trotskys_villa_small"
+	picture = "GFX_phase_raid_trotskys_villa"
+}

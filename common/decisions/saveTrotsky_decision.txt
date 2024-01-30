@@ -1,0 +1,102 @@
+saveTrotsky_decision_categories = {
+	trotsky_lead_country = {
+		icon = GFX_decision_generic_political_rally
+		visible = {
+			has_government = communism
+			has_country_flag = trotsky_saved
+			NOT = { has_country_leader = { character = SOV_iosif_stalin } }
+		}
+		available = {
+			has_government = communism
+			has_country_flag = trotsky_saved
+			NOT = { has_country_leader = { character = SOV_iosif_stalin } }
+		}
+
+		cost = 100
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = trotsky_to_government }
+				add_country_leader_role = {
+					character = gov_lev_trotsky
+					country_leader = {
+						ideology = leninism
+						traits = { saved_triumphant_revolutionary }
+						expire = "1965.1.1.1"
+					}
+					promote_leader = yes
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = trotsky_to_army }
+				add_country_leader_role = {
+					character = army_leon_trotsky
+					country_leader = {
+						ideology = leninism
+						traits = { saved_triumphant_revolutionary }
+						expire = "1965.1.1.1"
+					}
+					promote_leader = yes
+				}
+			}
+
+			SOV = {
+				if = {
+					limit = { has_country_leader = { character = SOV_iosif_stalin } }
+					if = {
+						limit = { is_in_faction_with = ROOT }
+						if = {
+							limit = { is_faction_leader = yes }
+							remove_from_faction = ROOT
+						}
+						else = { leave_faction = yes }
+					}
+					create_wargoal = {
+						target = ROOT
+						type = topple_government
+					}
+				}
+			}
+
+			if = {
+				limit = { is_faction_leader = yes }
+				set_faction_name = FOURTH_INTERNATIONAL_FACTION
+			}
+			else_if = {
+				limit = { is_in_faction = no }
+				create_faction = FOURTH_INTERNATIONAL_FACTION
+			}
+
+			if = {
+				limit = {
+					NOT = { has_global_flag = SOV_fourth_international_fired }
+				}
+				news_event = { id = nsb_news.200 hours = 2 random_hours = 2 }
+			}
+		}
+	}
+
+	show_trial_stalin = {
+		icon = GFX_decision_generic_arrest
+		visible = {
+			has_government = communism
+			has_country_flag = trotsky_saved
+			NOT = { has_country_leader = { character = SOV_iosif_stalin } }
+			SOV = { has_country_leader = { character = SOV_iosif_stalin } }
+		}
+		available = {
+			has_government = communism
+			has_country_flag = trotsky_saved
+			has_subject = SOV
+		}
+
+		cost = 10
+		complete_effect = {
+			SOV = { retire_ideology_leader = communism }
+			set_autonomy = {
+				target = SOV
+				autonomy_state = autonomy_personal_union
+			}
+			#SOV = { set_country_leader_ideology = leninism }
+		}
+	}
+}
