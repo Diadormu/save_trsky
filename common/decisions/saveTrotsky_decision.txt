@@ -1,6 +1,6 @@
 saveTrotsky_decision_categories = {
 	trotsky_lead_country = {
-		icon = GFX_decision_generic_political_rally
+		icon = GFX_trait_trait_SOV_trotskyist
 		visible = {
 			has_government = communism
 			has_country_flag = trotsky_saved
@@ -76,7 +76,7 @@ saveTrotsky_decision_categories = {
 	}
 
 	show_trial_stalin = {
-		icon = GFX_decision_generic_arrest
+		icon = GFX_trait_trait_SOV_stalinist
 		visible = {
 			has_government = communism
 			has_country_flag = trotsky_saved
