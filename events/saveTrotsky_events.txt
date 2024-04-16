@@ -25,6 +25,14 @@ country_event = {
 		}
 		set_global_flag = trotsky_has_saved
 		set_country_flag = trotsky_saved
+		set_nationality = {
+			target_country = ROOT
+			character = gov_lev_trotsky
+		}
+		set_nationality = {
+			target_country = ROOT
+			character = army_leon_trotsky
+		}
 	}
 
 	option = {
