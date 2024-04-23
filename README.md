@@ -7,6 +7,8 @@ Add an operation at MEX or NOR for save Trotsky
 After succeed, he will join the gov or army, even as the country leader  
 这个托洛茨基的特质都是综合了SOV、MEX、NOR的满血版  
 This Trotsky's traits are full version included SOV's、MEX's、NOR's  
+如果在与斯大林的苏联战争中投降将会移除这个托洛茨基  
+If capitulation in the war with Stalin'SOV will remove this Trotsky  
 
 引用了来自"[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2642352801]Dragon's Flag Rework[/url]"的SOV左派旗帜  
 引用了来自"[url=https://steamcommunity.com/sharedfiles/filedetails/?id=699302152]Adiya's Historical Flag Pack[/url]"的SOV右派旗帜  

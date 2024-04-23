@@ -1,4 +1,12 @@
 on_actions = {
+	on_startup = {
+		effect = {
+			SOV = {
+				recruit_character = gov_lev_trotsky
+				recruit_character = army_leon_trotsky
+			}
+		}
+	}
 	on_capitulation = {
 		effect = {
 			if = {
