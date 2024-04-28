@@ -1,0 +1,2 @@
+recruit_character = gov_lev_trotsky
+recruit_character = army_leon_trotsky
