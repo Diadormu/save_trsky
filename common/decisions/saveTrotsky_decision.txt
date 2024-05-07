@@ -9,7 +9,10 @@ saveTrotsky_decision_categories = {
 		available = {
 			has_government = communism
 			has_country_flag = trotsky_saved
-			NOT = { has_country_leader = { character = SOV_iosif_stalin } }
+			NOT = {
+				has_country_leader = { character = gov_lev_trotsky }
+				has_country_leader = { character = army_leon_trotsky }
+			}
 		}
 
 		cost = 100
@@ -96,7 +99,17 @@ saveTrotsky_decision_categories = {
 				target = SOV
 				autonomy_state = autonomy_personal_union
 			}
-			#SOV = { set_country_leader_ideology = leninism }
+			SOV = {
+				add_country_leader_role = {
+					character = "SOV_lev_trotsky"
+					promote_leader = yes
+					country_leader = {
+						ideology = leninism
+						traits = { triumphant_revolutionary }
+						expire = "1965.1.1.1"
+					}
+				}
+			}
 		}
 	}
 }

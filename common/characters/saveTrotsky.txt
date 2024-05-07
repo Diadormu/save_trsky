@@ -7,7 +7,7 @@ characters = {
 				small="GFX_idea_SOV_lev_trotsky"
 			}
 			army = {
-				large=GFX_portrait_SOV_lev_trotsky
+				#large=GFX_portrait_SOV_lev_trotsky
 				small="GFX_idea_SOV_lev_trotsky"
 			}
 		}
@@ -38,9 +38,10 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_portrait_MEX_leon_trotsky
+				small="GFX_idea_SOV_lev_trotsky"
 			}
 			army = {
-				small = "GFX_idea_MEX_leon_trotsky"
+				small = "GFX_idea_SOV_lev_trotsky"
 			}
 		}
 		advisor = {

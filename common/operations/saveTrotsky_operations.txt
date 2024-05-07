@@ -42,7 +42,7 @@ persuade_trotsky_operation = {
 	network_strength = 50
 
 	equipment = {
-		infantry_equipment = 50
+		infantry_equipment = 100
 		support_equipment = 50
 	}
 
@@ -150,7 +150,7 @@ save_trotsky_operation = {
 	network_strength = 60
 
 	equipment = {
-		infantry_equipment = 60
+		infantry_equipment = 120
 		support_equipment = 60
 	}
 
