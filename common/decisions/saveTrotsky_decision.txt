@@ -76,6 +76,8 @@ saveTrotsky_decision_categories = {
 				news_event = { id = nsb_news.200 hours = 2 random_hours = 2 }
 			}
 		}
+
+		ai_will_do = { factor = 0 }
 	}
 
 	show_trial_stalin = {
@@ -111,5 +113,7 @@ saveTrotsky_decision_categories = {
 				}
 			}
 		}
+
+		ai_will_do = { factor = 0 }
 	}
 }

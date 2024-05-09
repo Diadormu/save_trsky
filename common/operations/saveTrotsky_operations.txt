@@ -104,6 +104,8 @@ persuade_trotsky_operation = {
 			}
 		}
 	}
+
+	ai_will_do = { factor = 0 }
 }
 
 save_trotsky_operation = {
@@ -206,4 +208,6 @@ save_trotsky_operation = {
 			}
 		}
 	}
+
+	ai_will_do = { factor = 0 }
 }

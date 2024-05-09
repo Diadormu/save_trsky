@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_saveTrotsky_event_3000"
+		texturefile = "gfx/event_pictures/news_event_024.dds"
+	}
+
+	spriteType = {
+		name = "GFX_saveTrotsky_event_3001"
+		texturefile = "gfx/event_pictures/news_event_023.dds"
+	}
+}
