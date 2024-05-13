@@ -16,6 +16,7 @@ saveTrotsky_decision_categories = {
 		}
 
 		cost = 100
+		fire_only_once = yes
 		complete_effect = {
 			if = {
 				limit = { has_country_flag = trotsky_to_government }

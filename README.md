@@ -14,3 +14,5 @@ If capitulation in the war with Stalin'SOV will remove this Trotsky
 引用了来自"[url=https://steamcommunity.com/sharedfiles/filedetails/?id=699302152]Adiya's Historical Flag Pack[/url]"的SOV右派旗帜  
 include SOV left opposition flag from "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2642352801]Dragon's Flag Rework[/url]"  
 include SOV right opposition flag from "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=699302152]Adiya's Historical Flag Pack[/url]"  
+
+[⭐Github🌟](https://github.com/Diadormu/save_trsky)

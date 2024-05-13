@@ -22,18 +22,17 @@ characters = {
 				has_country_flag = trotsky_saved
 			}
 			available = {
+				has_government = communism
 				has_country_flag = trotsky_to_government
 			}
 			traits = {
 				saved_military_naval_affairs
 			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { factor = 0 }
 		}
 	}
 
-	army_leon_trotsky={
+	army_leon_trotsky = {
 		name = army_leon_trotsky
 		portraits = {
 			civilian = {
@@ -55,14 +54,13 @@ characters = {
 				has_country_flag = trotsky_saved
 			}
 			available = {
+				has_government = communism
 				has_country_flag = trotsky_to_army
 			}
 			traits = {
 				red_army_organizer
 			}
-			ai_will_do = {
-				factor = 1.000
-			}
+			ai_will_do = { factor = 0 }
 		}
 		field_marshal = {
 			visible = {
@@ -70,6 +68,7 @@ characters = {
 				#	has_global_flag = trotsky_dead
 				#}
 				has_country_flag = trotsky_saved
+				has_government = communism
 				has_country_flag = trotsky_to_army
 			}
 			traits = { media_personality organisational_leader }
