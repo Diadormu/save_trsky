@@ -15,6 +15,7 @@ on_actions = {
 					}
 				}
 				clr_global_flag = trotsky_has_saved
+				set_global_flag = trotsky_dead
 				ROOT = {
 					clr_country_flag = trotsky_saved
 					if = {

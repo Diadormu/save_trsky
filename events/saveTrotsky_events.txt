@@ -27,24 +27,11 @@ country_event = {
 		}
 		set_global_flag = trotsky_has_saved
 		set_country_flag = trotsky_saved
-		hidden_effect = {
-			SOV = {
-				set_nationality = {
-					target_country = ROOT
-					character = gov_lev_trotsky
-				}
-				set_nationality = {
-					target_country = ROOT
-					character = army_leon_trotsky
-				}
-			}
-		}
 	}
 
 	option = {
 		name = sts.3000.a
 		set_country_flag = trotsky_to_government
-		show_ideas_tooltip = gov_lev_trotsky
 		SOV = {
 			if = {
 				limit = { has_country_leader = { character = SOV_iosif_stalin } }
@@ -52,13 +39,17 @@ country_event = {
 					target = ROOT
 					modifier = save_trotsky_opinion
 				}
+			}
+			show_ideas_tooltip = gov_lev_trotsky
+			set_nationality = {
+				target_country = ROOT
+				character = gov_lev_trotsky
 			}
 		}
 	}
 	option = {
 		name = sts.3000.b
 		set_country_flag = trotsky_to_army
-		show_ideas_tooltip = army_leon_trotsky
 		SOV = {
 			if = {
 				limit = { has_country_leader = { character = SOV_iosif_stalin } }
@@ -66,6 +57,11 @@ country_event = {
 					target = ROOT
 					modifier = save_trotsky_opinion
 				}
+			}
+			show_ideas_tooltip = army_leon_trotsky
+			set_nationality = {
+				target_country = ROOT
+				character = army_leon_trotsky
 			}
 		}
 	}
