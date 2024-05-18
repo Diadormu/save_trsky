@@ -85,13 +85,25 @@ saveTrotsky_decision_categories = {
 		icon = GFX_trait_trait_SOV_stalinist
 		visible = {
 			has_government = communism
-			has_country_flag = trotsky_saved
+			OR = {
+				has_country_flag = trotsky_saved
+				AND = {
+					original_tag = MEX
+					has_country_leader = { character = MEX_leon_trotsky }
+				}
+			}
 			NOT = { has_country_leader = { character = SOV_iosif_stalin } }
 			SOV = { has_country_leader = { character = SOV_iosif_stalin } }
 		}
 		available = {
 			has_government = communism
-			has_country_flag = trotsky_saved
+			OR = {
+				has_country_flag = trotsky_saved
+				AND = {
+					original_tag = MEX
+					has_country_leader = { character = MEX_leon_trotsky }
+				}
+			}
 			has_subject = SOV
 		}
 

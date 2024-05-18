@@ -15,3 +15,4 @@ dependencies={
 }
 name="Save Trotsky"
 supported_version="1.14.*"
+remote_file_id="3248925467"
