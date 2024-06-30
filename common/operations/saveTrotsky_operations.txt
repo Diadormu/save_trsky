@@ -64,7 +64,7 @@ persuade_trotsky_operation = {
 		ROOT = { country_event = sts.3000 } #SUCCESS
 	}
 
-	outcome_extra_chance = 0.50
+	outcome_extra_chance = 0.40
 
 	outcome_extra_execute = {
 		ROOT = { country_event = sts.3001 } #FAILURE
