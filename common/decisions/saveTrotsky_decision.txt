@@ -4,12 +4,16 @@ saveTrotsky_decision_categories = {
 		visible = {
 			has_government = communism
 			has_country_flag = trotsky_saved
-			NOT = { has_country_leader = { character = SOV_iosif_stalin } }
+			NOT = {
+				original_tag = SOV
+				has_country_leader = { character = SOV_iosif_stalin }
+			}
 		}
 		available = {
 			has_government = communism
 			has_country_flag = trotsky_saved
 			NOT = {
+				original_tag = SOV
 				has_country_leader = { character = gov_lev_trotsky }
 				has_country_leader = { character = army_leon_trotsky }
 			}
