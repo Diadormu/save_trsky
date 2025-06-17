@@ -133,4 +133,45 @@ saveTrotsky_decision_categories = {
 
 		ai_will_do = { factor = 0 }
 	}
+
+	persuade_trotsky_dev = {
+		icon = GFX_trait_trait_SOV_trotskyist
+		allow = { NOT = { original_tag = SOV } }
+		visible = {
+			has_government = communism
+			NOT = {
+				has_global_flag = trotsky_in_norwegian_government
+				has_global_flag = AAT_trotsky_sent_to_stalin
+				has_global_flag = flag_mexico_invited_trotsky_to_government
+				has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
+				has_global_flag = flag_trotsky_dead
+				has_global_flag = trotsky_has_saved
+			}
+		}
+		available = {
+			has_government = communism
+			NOT = {
+				SOV = { has_country_leader = { character = SOV_iosif_stalin } }
+				has_global_flag = AAT_trotsky_sent_to_stalin
+				has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
+				has_global_flag = flag_trotsky_dead
+				has_global_flag = trotsky_has_saved
+				any_country = {
+					OR = {
+						original_tag = NOR
+						original_tag = MEX
+					}
+					has_global_flag = flag_mexico_invited_trotsky_to_government
+				}
+			}
+		}
+
+		cost = 50
+		days_remove = 35
+
+		remove_effect = {
+			country_event = { id = sts.3000 }
+		}
+		ai_will_do = { factor = 0 }
+	}
 }
