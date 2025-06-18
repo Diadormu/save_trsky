@@ -1,7 +1,7 @@
 saveTrotsky_decision_categories = {
 	trotsky_lead_country = {
 		icon = GFX_trait_trait_SOV_trotskyist
-		allow = { NOT = { original_tag = SOV } }
+		allowed = { NOT = { original_tag = SOV } }
 		visible = {
 			has_government = communism
 			has_country_flag = trotsky_saved
@@ -83,7 +83,7 @@ saveTrotsky_decision_categories = {
 
 	show_trial_stalin = {
 		icon = GFX_trait_trait_SOV_stalinist
-		allow = { NOT = { original_tag = SOV } }
+		allowed = { NOT = { original_tag = SOV } }
 		visible = {
 			has_government = communism
 			OR = {
@@ -132,7 +132,7 @@ saveTrotsky_decision_categories = {
 
 	persuade_trotsky_dev = {
 		icon = GFX_trait_trait_SOV_trotskyist
-		allow = { NOT = { original_tag = SOV } }
+		allowed = { NOT = { original_tag = SOV } }
 		visible = {
 			has_government = communism
 			NOT = {

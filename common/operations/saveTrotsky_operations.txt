@@ -7,13 +7,14 @@ persuade_trotsky_operation = {
 
 	priority = 11
 
-	allow = { NOT = { original_tag = SOV } }
+	allowed = { NOT = { original_tag = SOV } }
 	#available = {}
 	visible = {
 		NOT = {
 			has_global_flag = trotsky_in_norwegian_government
 			has_global_flag = AAT_trotsky_sent_to_stalin
 			has_global_flag = flag_mexico_invited_trotsky_to_government
+			has_global_flag = flag_trotsky_returning_to_ussr_from_norway
 			has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
 			has_global_flag = flag_trotsky_dead
 			has_global_flag = trotsky_has_saved
@@ -26,7 +27,7 @@ persuade_trotsky_operation = {
 				FROM = {
 					controls_state = 110 #OSTLANDET (Oslo) -> Trotsky not accepted in Mexico (or Soviets being super fast to kill him, which should be impossible btw)
 				}
-				NOT = { has_global_flag = trotsky_exile_mexico }
+				has_global_flag = NOR_trotsky_in_norway
 			}
 			AND = {
 				FROM = {
@@ -117,13 +118,14 @@ save_trotsky_operation = {
 
 	priority = 10
 
-	allow = { NOT = { original_tag = SOV } }
+	allowed = { NOT = { original_tag = SOV } }
 	#available = {}
 	visible = {
 		NOT = {
 			has_global_flag = trotsky_in_norwegian_government
 			has_global_flag = AAT_trotsky_sent_to_stalin
 			has_global_flag = flag_mexico_invited_trotsky_to_government
+			has_global_flag = flag_trotsky_returning_to_ussr_from_norway
 			has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
 			has_global_flag = flag_trotsky_dead
 			has_global_flag = trotsky_has_saved
@@ -136,7 +138,7 @@ save_trotsky_operation = {
 				FROM = {
 					controls_state = 110 #OSTLANDET (Oslo) -> Trotsky not accepted in Mexico (or Soviets being super fast to kill him, which should be impossible btw)
 				}
-				NOT = { has_global_flag = trotsky_exile_mexico }
+				has_global_flag = NOR_trotsky_in_norway
 			}
 			AND = {
 				FROM = {
