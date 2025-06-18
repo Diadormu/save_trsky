@@ -1,19 +1,15 @@
 saveTrotsky_decision_categories = {
 	trotsky_lead_country = {
 		icon = GFX_trait_trait_SOV_trotskyist
+		allow = { NOT = { original_tag = SOV } }
 		visible = {
 			has_government = communism
 			has_country_flag = trotsky_saved
-			NOT = {
-				original_tag = SOV
-				has_country_leader = { character = SOV_iosif_stalin }
-			}
 		}
 		available = {
 			has_government = communism
 			has_country_flag = trotsky_saved
 			NOT = {
-				original_tag = SOV
 				has_country_leader = { character = gov_lev_trotsky }
 				has_country_leader = { character = army_leon_trotsky }
 			}
@@ -87,6 +83,7 @@ saveTrotsky_decision_categories = {
 
 	show_trial_stalin = {
 		icon = GFX_trait_trait_SOV_stalinist
+		allow = { NOT = { original_tag = SOV } }
 		visible = {
 			has_government = communism
 			OR = {
@@ -96,7 +93,6 @@ saveTrotsky_decision_categories = {
 					has_country_leader = { character = MEX_leon_trotsky }
 				}
 			}
-			NOT = { has_country_leader = { character = SOV_iosif_stalin } }
 			SOV = { has_country_leader = { character = SOV_iosif_stalin } }
 		}
 		available = {
@@ -147,11 +143,15 @@ saveTrotsky_decision_categories = {
 				has_global_flag = flag_trotsky_dead
 				has_global_flag = trotsky_has_saved
 			}
+			has_global_flag = trotsky_exile_mexico
 		}
 		available = {
 			has_government = communism
+			OR = {
+				SOV = { NOT = { has_country_leader = { character = SOV_iosif_stalin } } }
+				277 = { is_controlled_by_ROOT_or_ally = yes }
+			}
 			NOT = {
-				SOV = { has_country_leader = { character = SOV_iosif_stalin } }
 				has_global_flag = AAT_trotsky_sent_to_stalin
 				has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
 				has_global_flag = flag_trotsky_dead

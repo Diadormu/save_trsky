@@ -7,7 +7,7 @@ persuade_trotsky_operation = {
 
 	priority = 11
 
-	#allowed = {}
+	allow = { NOT = { original_tag = SOV } }
 	#available = {}
 	visible = {
 		NOT = {
@@ -117,7 +117,7 @@ save_trotsky_operation = {
 
 	priority = 10
 
-	#allowed = {}
+	allow = { NOT = { original_tag = SOV } }
 	#available = {}
 	visible = {
 		NOT = {
