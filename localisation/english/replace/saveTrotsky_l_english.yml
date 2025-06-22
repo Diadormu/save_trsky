@@ -5,6 +5,7 @@
   saved_military_naval_affairs: "$permanent_revolutionary$"
   saveTrotsky_decision_categories: "$NOR_permanent_revolution_ns$"
   trotsky_saved: "Saved Trotsky"
+  trotsky_has_saved: "$trotsky_saved$"
   trotsky_to_government: "$flag_mexico_invited_trotsky_to_government$"
   trotsky_to_army: "Trotsky has been invited to join the army"
   save_trotsky_opinion: "Dismiss your leftist status"

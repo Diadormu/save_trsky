@@ -3,6 +3,6 @@ saveTrotsky_decision_categories = {
 	icon = GFX_decision_category_SOV_civil_war
 
 	visible = {
-		has_country_flag = trotsky_saved
+		has_government = communism
 	}
 }

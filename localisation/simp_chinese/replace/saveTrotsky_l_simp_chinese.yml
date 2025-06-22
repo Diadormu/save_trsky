@@ -5,6 +5,7 @@
   saved_military_naval_affairs: "$permanent_revolutionary$"
   saveTrotsky_decision_categories: "$NOR_permanent_revolution_ns$"
   trotsky_saved: "已救出托洛茨基"
+  trotsky_has_saved: "$trotsky_saved$"
   trotsky_to_government: "$flag_mexico_invited_trotsky_to_government$"
   trotsky_to_army: "托洛茨基受邀请加入军队"
   save_trotsky_opinion: "除你左籍"
